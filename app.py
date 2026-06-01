@@ -39,8 +39,8 @@ def obter_resposta(texto: str) -> str:
 
 def chat() -> None:
     print('Bem-vindo ao ChatBot!')
-    print('Escreva "bye" para sair do chat')
-    name: str = input('Bot: Como te chamas? ')
+    print('\nEscreva "bye" para sair do chat')
+    name: str = input('\nBot: Como te chamas? ')
     print(f'Bot: Olá, {name}! \n Como te posso ajudar?')
 
     while True:
