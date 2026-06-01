@@ -34,14 +34,14 @@ def obter_resposta(texto: str) -> str:
         elif chave in comando:
             return resposta
 
-     return f'Desculpa, não entendi a questão! {texto}'
+    return f'Desculpa, não entendi a questão! {texto}'
 
 
 def chat() -> None:
     print('Bem-vindo ao ChatBot!')
     print('\nEscreva "bye" para sair do chat')
     name: str = input('\nBot: Como te chamas? ')
-    print(f'Bot: Olá, {name}! \n Como te posso ajudar?')
+    print(f'Bot: Olá, {name}!\n \n Como te posso ajudar?')
 
     while True:
         user_input: str = input('Tu: ')
