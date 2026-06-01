@@ -27,9 +27,9 @@ def obter_resposta(texto: str) -> str:
         ('bye', 'adeus', 'tchau', 'xau', 'q'): 'Gostei de falar contigo! Até breve...',
         ('horas', 'que horas são'): f'São: {datetime.now():%H:%M} horas',
         ('data', 'dia'): f'Hoje é dia: {datetime.now():%d-%m-%Y}',
-        ('como te chamas?', 'qual é o teu nome?'): 'O meu nome é: Bot :)'
-        ('tempo', 'como está o tempo?'): 'Não tenho acesso à informação do tempo, mas espero que esteja um ótimo dia!'
-        ('Quem és tu?', 'sobre ti'): 'Sou um chatbot criado para responder às tuas perguntas e ajudar-te com o que precisares!'
+        ('como te chamas?', 'qual é o teu nome?'): 'O meu nome é: Bot :)',
+        ('tempo', 'como está o tempo?'): 'Não tenho acesso à informação do tempo, mas espero que esteja um ótimo dia!',
+        ('quem és tu?', 'sobre ti'): 'Sou um chatbot criado para responder às tuas perguntas e ajudar-te com o que precisares!'
     }
 
     for chave, resposta in respostas.items():
@@ -39,7 +39,7 @@ def obter_resposta(texto: str) -> str:
         elif chave in comando:
             return resposta
 
-    return f'Desculpa, não entendi a questão! {texto}'
+    return f'Desculpa, não entendi a questão. Podes dizer de outra forma?'
 
 
 def chat() -> None:
@@ -53,7 +53,7 @@ def chat() -> None:
         resposta: str = obter_resposta(user_input)
         print(f'Bot: {resposta}')
 
-        if user_input.lower() in ('bye', 'adeus', 'tchau'):
+        if user_input.lower() in ('bye', 'adeus', 'tchau', 'xau', 'q'):
             break
 
     print('Chat acabou')
