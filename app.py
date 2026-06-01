@@ -27,6 +27,9 @@ def obter_resposta(texto: str) -> str:
         ('bye', 'adeus', 'tchau', 'xau', 'q'): 'Gostei de falar contigo! Até breve...',
         ('horas', 'que horas são'): f'São: {datetime.now():%H:%M} horas',
         ('data', 'dia'): f'Hoje é dia: {datetime.now():%d-%m-%Y}',
+        ('como te chamas?', 'qual é o teu nome?'): 'O meu nome é: Bot :)'
+        ('tempo', 'como está o tempo?'): 'Não tenho acesso à informação do tempo, mas espero que esteja um ótimo dia!'
+        ('Quem és tu?', 'sobre ti'): 'Sou um chatbot criado para responder às tuas perguntas e ajudar-te com o que precisares!'
     }
 
     for chave, resposta in respostas.items():
